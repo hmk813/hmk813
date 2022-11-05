@@ -79,4 +79,6 @@ public class BoardController {
 	// -password/모드/번호
 	// 모드는 반드시 edit or delete중 하나가 오도록 검사
 	
+	@GetMapping("")
+	
 }
