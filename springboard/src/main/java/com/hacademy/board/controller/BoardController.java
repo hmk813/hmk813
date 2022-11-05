@@ -74,4 +74,9 @@ public class BoardController {
 		boardRepository.deleteById(no);
 		return "redirect:/";
 	}
+	
+	//비밀번호 검사 매핑추가
+	// -password/모드/번호
+	// 모드는 반드시 edit or delete중 하나가 오도록 검사
+	
 }
