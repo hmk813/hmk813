@@ -21,7 +21,7 @@ public class MybatisInsertTest {
 		//sqlSession.insert("pocketmon.add");
 		
 		PocketMonsterDto dto = PocketMonsterDto.builder()
-														.no(125)
+														.no(128)
 														.name("리자몽")
 														.type("불")
 													.build();
