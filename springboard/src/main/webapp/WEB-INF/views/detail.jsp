@@ -52,7 +52,7 @@
 				-주소는 /password/edit 또는 delete/번호 형태로 경로 변수 처리
 			 -->
 			<a href="password/edit/${board.no}" class="btn btn-warning">수정</a>
-			<a href="password/delete=${board.no}" class="btn btn-danger">삭제</a>
+			<a href="password/delete/${board.no}" class="btn btn-danger">삭제</a>
 			<a href="./" class="btn btn-dark">목록</a>
 		</div>
 	</div>
