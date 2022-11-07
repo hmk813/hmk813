@@ -75,10 +75,13 @@
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
+=======
+>>>>>>> branch 'main' of https://github.com/hmk813/hmk813.git
 	</dependencies>
 
 	<build>

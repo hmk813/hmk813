@@ -40,6 +40,7 @@
 		</div>
 	</div>
 	
+<<<<<<< HEAD
 	<!-- 비밀번호를 재설정하도록 입력창 추가 -->
 	<div class="row mt-4">
 		<div class="col-md-10 offset-md-1">
@@ -50,6 +51,8 @@
 		</div>
 	</div>
 	
+=======
+>>>>>>> branch 'main' of https://github.com/hmk813/hmk813.git
 	<div class="row mt-4">
 		<div class="col-md-10 offset-md-1 text-end">
 			<a href="./" type="button" class="btn btn-secondary btn-lg">목록</a>
