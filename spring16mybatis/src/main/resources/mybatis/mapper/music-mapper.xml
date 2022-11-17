@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DOCTYPE 설정을 통해 자동완성 + 문법검사 수행 -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- 
+	mapper 내부에 SQL 구문을 배치
+	- namespace : 외부에서 부르기 위한 별칭(테이블명으로 작성)
+-->
+<mapper namespace="music">
+	<!-- 
+		parameterType은 구문의 실행을 위해서 필요한 데이터 형태(공용)
+		resultType은 구문의 실행을 통해 얻어내고자 하는 데이터 형태(select전용)
+	 -->
+	
+	<insert id="insert" parameterType="MusicDto">
+		insert into music(music_no, music_title, music_artist, music_album, music_play, release_time)
+		values(music_seq.nextval, #{musicTitle}, #{musicArtist}, #{musicAlbum}, 0, #{releaseTime})
+	</insert>
+	
+	
+	<!-- select는 단일조회와 목록조회가 있지만 크게 구분하지 않는다 -->
+	<select id="list" resultType="MusicDto">
+		select * from music
+	</select>
+	
+	<!-- 단일 조회 구문 -->
+	<select id="one" parameterType="int" resultType="MusicDto">
+		select * from music where music_no = #{musicNo}
+	</select>
+	
+	<!-- 수정 구문 -->
+	<update id="edit" parameterType="MusicDto">
+		update music
+		set 
+			music_title=#{musicTitle},
+			music_artist=#{musicArtist},
+			music_album=#{musicAlbum},
+			release_time=#{releaseTime}
+		where 
+				music_no=#{musicNo}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete music where music_no = #{musicNo}
+	</delete>
+	
+</mapper>
+
