@@ -1,0 +1,16 @@
+2022-11-25 21:21:15.268 [INFO ] [com.kh.spring19.LoggingTest1] Starting LoggingTest1 using Java 11.0.16.1 on DESKTOP-A8RFTKU with PID 9820 (started by moon in C:\spring-workspace\spring19logging) 
+2022-11-25 21:21:15.269 [DEBUG] [com.kh.spring19.LoggingTest1] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-25 21:21:15.269 [INFO ] [com.kh.spring19.LoggingTest1] No active profile set, falling back to 1 default profile: "default" 
+2022-11-25 21:21:18.160 [INFO ] [com.kh.spring19.LoggingTest1] Started LoggingTest1 in 3.22 seconds (JVM running for 4.131) 
+2022-11-25 21:21:18.529 [DEBUG] [com.kh.spring19.LoggingTest1] debug메세지 
+2022-11-25 21:21:18.530 [INFO ] [com.kh.spring19.LoggingTest1] info메세지 
+2022-11-25 21:21:18.530 [WARN ] [com.kh.spring19.LoggingTest1] warn메세지 
+2022-11-25 21:21:18.532 [ERROR] [com.kh.spring19.LoggingTest1] error메세지 
+2022-11-25 21:27:41.34 [INFO ] [com.kh.spring19.LoggingTest1] Starting LoggingTest1 using Java 11.0.16.1 on DESKTOP-A8RFTKU with PID 5600 (started by moon in C:\spring-workspace\spring19logging) 
+2022-11-25 21:27:41.35 [DEBUG] [com.kh.spring19.LoggingTest1] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-25 21:27:41.35 [INFO ] [com.kh.spring19.LoggingTest1] No active profile set, falling back to 1 default profile: "default" 
+2022-11-25 21:27:44.39 [INFO ] [com.kh.spring19.LoggingTest1] Started LoggingTest1 in 3.326 seconds (JVM running for 4.228) 
+2022-11-25 21:27:44.405 [DEBUG] [com.kh.spring19.LoggingTest1] debug메세지 
+2022-11-25 21:27:44.406 [INFO ] [com.kh.spring19.LoggingTest1] info메세지 
+2022-11-25 21:27:44.406 [WARN ] [com.kh.spring19.LoggingTest1] warn메세지 
+2022-11-25 21:27:44.406 [ERROR] [com.kh.spring19.LoggingTest1] error메세지 
