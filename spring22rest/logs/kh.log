@@ -1,0 +1,431 @@
+2022-11-27 00:37:24.1 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 with PID 6872 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:37:24.1 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v3.0.0, Spring v6.0.2 
+2022-11-27 00:37:24.1 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:37:27.8 [ERROR] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Exception during pool initialization. 
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:558)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:553)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1375)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:783)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:451)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTHWithO5Logon(T4CTTIoauthenticate.java:1565)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1314)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1268)
+	at oracle.jdbc.driver.T4CConnection.authenticateWithPassword(T4CConnection.java:1505)
+	at oracle.jdbc.driver.T4CConnection.authenticateUserForLogon(T4CConnection.java:1454)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:666)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1041)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:89)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:732)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:648)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:166)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:129)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:118)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:87)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:80)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:131)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:131)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.kh.spring22.Spring22restApplication.main(Spring22restApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2022-11-27 00:37:29.3 [ERROR] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Exception during pool initialization. 
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:558)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:553)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1375)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:783)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:451)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTHWithO5Logon(T4CTTIoauthenticate.java:1565)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1314)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1268)
+	at oracle.jdbc.driver.T4CConnection.authenticateWithPassword(T4CConnection.java:1505)
+	at oracle.jdbc.driver.T4CConnection.authenticateUserForLogon(T4CConnection.java:1454)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:666)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1041)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:89)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:732)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:648)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.kh.spring22.Spring22restApplication.main(Spring22restApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2022-11-27 00:37:29.3 [ERROR] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] 
+2022-11-27 00:37:29.4 [ERROR] [org.springframework.boot.SpringApplication] Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.kh.spring22.Spring22restApplication.main(Spring22restApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 21 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:147)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:60)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	... 36 common frames omitted
+2022-11-27 00:38:28.6 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 with PID 4364 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:38:28.6 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v3.0.0, Spring v6.0.2 
+2022-11-27 00:38:28.6 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:38:32.1 [ERROR] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field sqlSession in com.kh.spring22.repository.PocketMonsterDaoImpl required a bean of type 'org.apache.ibatis.session.SqlSession' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.ibatis.session.SqlSession' in your configuration.
+ 
+2022-11-27 00:38:59.5 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 with PID 12968 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:38:59.5 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v3.0.0, Spring v6.0.2 
+2022-11-27 00:38:59.5 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:39:03.4 [ERROR] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field sqlSession in com.kh.spring22.repository.PocketMonsterDaoImpl required a bean of type 'org.apache.ibatis.session.SqlSession' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.ibatis.session.SqlSession' in your configuration.
+ 
+2022-11-27 00:40:43.2 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 with PID 8636 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:40:43.3 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v3.0.0, Spring v6.0.2 
+2022-11-27 00:40:43.3 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:40:47.4 [ERROR] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field sqlSession in com.kh.spring22.repository.PocketMonsterDaoImpl required a bean of type 'org.apache.ibatis.session.SqlSession' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.ibatis.session.SqlSession' in your configuration.
+ 
+2022-11-27 00:45:43.7 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 with PID 4336 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:45:43.7 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v3.0.0, Spring v6.0.2 
+2022-11-27 00:45:43.7 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:45:48.3 [ERROR] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field sqlSession in com.kh.spring22.repository.PocketMonsterDaoImpl required a bean of type 'org.apache.ibatis.session.SqlSession' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.ibatis.session.SqlSession' in your configuration.
+ 
+2022-11-27 00:47:20.3 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 with PID 10144 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:47:20.3 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v3.0.0, Spring v6.0.2 
+2022-11-27 00:47:20.3 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:47:24.1 [ERROR] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field sqlSession in com.kh.spring22.repository.PocketMonsterDaoImpl required a bean of type 'org.apache.ibatis.session.SqlSession' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.ibatis.session.SqlSession' in your configuration.
+ 
+2022-11-27 00:48:35.2 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 with PID 14340 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:48:35.2 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v3.0.0, Spring v6.0.2 
+2022-11-27 00:48:35.2 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:48:39.3 [ERROR] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field sqlSession in com.kh.spring22.repository.PocketMonsterDaoImpl required a bean of type 'org.apache.ibatis.session.SqlSession' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.ibatis.session.SqlSession' in your configuration.
+ 
+2022-11-27 00:51:21.3 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 with PID 2368 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:51:21.3 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v3.0.0, Spring v6.0.2 
+2022-11-27 00:51:21.3 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:51:25.2 [ERROR] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field sqlSession in com.kh.spring22.repository.PocketMonsterDaoImpl required a bean of type 'org.apache.ibatis.session.SqlSession' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.ibatis.session.SqlSession' in your configuration.
+ 
+2022-11-27 00:53:31.1 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 with PID 13272 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:53:31.1 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v3.0.0, Spring v6.0.2 
+2022-11-27 00:53:31.1 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:53:34.5 [ERROR] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field sqlSession in com.kh.spring22.repository.PocketMonsterDaoImpl required a bean of type 'org.apache.ibatis.session.SqlSession' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.ibatis.session.SqlSession' in your configuration.
+ 
+2022-11-27 00:57:14.542 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 7048 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 00:57:14.544 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 00:57:14.544 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 00:57:18.119 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 3.981 seconds (JVM running for 4.798) 
+2022-11-27 01:03:02.885 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 7048 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 01:03:02.886 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 01:03:02.886 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 01:03:03.901 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.082 seconds (JVM running for 350.58) 
+2022-11-27 01:03:09.392 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8336 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 01:03:09.394 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 01:03:09.394 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 01:03:12.924 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 3.979 seconds (JVM running for 4.803) 
+2022-11-27 01:04:05.260 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8336 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 01:04:05.260 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 01:04:05.260 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 01:04:05.969 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 0.734 seconds (JVM running for 57.848) 
+2022-11-27 01:04:11.684 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 13244 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 01:04:11.685 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 01:04:11.685 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 01:04:15.795 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 4.568 seconds (JVM running for 5.373) 
+2022-11-27 01:08:24.903 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 13244 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 01:08:24.904 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 01:08:24.904 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 01:08:26.83 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.21 seconds (JVM running for 255.662) 
+2022-11-27 01:31:15.680 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 13244 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 01:31:15.680 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 01:31:15.680 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 01:31:17.39 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.392 seconds (JVM running for 1626.617) 
+2022-11-27 01:31:24.156 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 10376 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 01:31:24.156 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 01:31:24.156 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 01:31:29.644 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 6.135 seconds (JVM running for 7.215) 
+2022-11-27 10:59:48.187 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8216 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 10:59:48.188 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 10:59:48.188 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 10:59:52.785 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 5.034 seconds (JVM running for 5.94) 
+2022-11-27 11:18:28.822 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8216 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 11:18:28.823 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 11:18:28.823 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 11:18:29.983 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.208 seconds (JVM running for 1123.138) 
+2022-11-27 11:19:01.327 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8216 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 11:19:01.327 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 11:19:01.327 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 11:19:02.520 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.218 seconds (JVM running for 1155.675) 
+2022-11-27 11:19:14.186 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8216 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 11:19:14.186 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 11:19:14.186 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 11:19:15.343 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.184 seconds (JVM running for 1168.497) 
+2022-11-27 11:19:50.488 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8216 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 11:19:50.489 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 11:19:50.489 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 11:19:51.485 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.028 seconds (JVM running for 1204.639) 
+2022-11-27 11:21:02.140 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8216 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 11:21:02.140 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 11:21:02.140 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 11:21:03.282 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.167 seconds (JVM running for 1276.437) 
+2022-11-27 11:21:09.143 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8220 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 11:21:09.144 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 11:21:09.145 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 11:21:13.257 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 4.631 seconds (JVM running for 5.478) 
+2022-11-27 11:24:08.612 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8220 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 11:24:08.613 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 11:24:08.613 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 11:24:09.945 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.389 seconds (JVM running for 182.166) 
+2022-11-27 11:24:22.675 [INFO ] [com.kh.spring22.Spring22restApplication] Starting Spring22restApplication using Java 17.0.4.1 on 황문규 with PID 8220 (C:\spring-workspace2\spring22rest\target\classes started by moonk in C:\spring-workspace2\spring22rest) 
+2022-11-27 11:24:22.675 [DEBUG] [com.kh.spring22.Spring22restApplication] Running with Spring Boot v2.7.5, Spring v5.3.23 
+2022-11-27 11:24:22.675 [INFO ] [com.kh.spring22.Spring22restApplication] No active profile set, falling back to 1 default profile: "default" 
+2022-11-27 11:24:23.769 [INFO ] [com.kh.spring22.Spring22restApplication] Started Spring22restApplication in 1.123 seconds (JVM running for 195.99) 
